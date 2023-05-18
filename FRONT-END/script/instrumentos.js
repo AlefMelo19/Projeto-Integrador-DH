@@ -6,13 +6,13 @@ images.forEach((image) => {
   });
 });
 
-function adicionarAoCarrinho(nome, marca, modelo, preco) {
-    console.log("Produto adicionado ao carrinho:");
-    console.log("Nome:", nome);
-    console.log("Marca:", marca);
-    console.log("Modelo:", modelo);
-    console.log("Preço:", preco);
+function adicionarAoCarrinho(instrumento, marca, modelo, preco) {
+  document.cookie = "nomeInstrumento=" + encodeURIComponent(instrumento);
+  document.cookie = "marcaProduto=" + encodeURIComponent(marca);
+  document.cookie = "modeloProduto=" + encodeURIComponent(modelo);
+  document.cookie = "precoProduto=" + encodeURIComponent(preco);
   
-    window.location.href = "pagina-do-carrinho.html";
-  }
+  window.location.href = "carrinho.html";
+}
+
   

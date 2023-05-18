@@ -67,3 +67,12 @@ body {
     margin-top: 10px;
   }
   
+  .btn-voltar {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .btn-voltar:hover {
+    text-decoration: underline;
+  }
+  
