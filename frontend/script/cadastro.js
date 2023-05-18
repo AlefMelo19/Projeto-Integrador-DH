@@ -1,13 +1,9 @@
-// Aguardar o carregamento completo do DOM antes de executar o código JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-    // Referenciar o formulário pelo ID
-    var form = document.getElementById('formulario');
+
+  var form = document.getElementById('formulario');
   
-    // Adicionar um ouvinte de evento para o evento 'submit' do formulário
-    form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Impedir o envio padrão do formulário
-  
-      // Obter os valores dos campos do formulário
+   form.addEventListener('submit', function(event) {
+      event.preventDefault(); 4
       var nome = document.getElementById('nome').value;
       var cpf = document.getElementById('cpf').value;
       var rg = document.getElementById('rg').value;
