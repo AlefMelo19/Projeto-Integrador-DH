@@ -1,0 +1,98 @@
+.top-nav {
+    display: inline-block;
+    padding: 1px;
+    border: 1px solid #f3f1f1;
+    border-radius: 1px;
+  }
+  
+  .top-nav a {
+    margin-right: 1px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+body {
+    background-image: url("https://images.pexels.com/photos/15003382/pexels-photo-15003382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .container {
+    min-height: 100vh;
+    position: relative;
+  }
+  
+
+header {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black; 
+    color: silver;
+    margin-top: 15; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(248, 243, 243);
+    color: #030303;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s; 
+}
+
+nav ul li a:hover {
+    background-color: #030303;
+    color: white;
+}
+
+.btn-produtos, .btn-whatsapp {
+    background-color: rgb(248, 243, 243);
+}
+
+html, body {
+    height: 90%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    min-height: 90%;
+    position: relative;
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 12px;
+    color: #050505;
+    margin: 0;
+  }
+  
+  
