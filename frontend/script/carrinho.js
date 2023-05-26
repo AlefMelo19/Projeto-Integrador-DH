@@ -1,25 +1,25 @@
-function getURLParams() {
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  return urlParams;
-}
+window.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const nomeInstrumento = urlParams.get('nome');
+  const marcaProduto = urlParams.get('marca');
+  const modeloProduto = urlParams.get('modelo');
+  const precoProduto = urlParams.get('preco');
+  const imagemProduto = urlParams.get('imagem');
+  const quantidadeProduto = urlParams.get('quantidade');
 
-function preencherProduto() {
-  const urlParams = getURLParams();
-  const instrumento = urlParams.get("instrumento");
-  const marca = urlParams.get("marca");
-  const modelo = urlParams.get("modelo");
-  const preco = urlParams.get("preco");
-  const imagem = urlParams.get("imagem");
+  const nomeInstrumentoElement = document.getElementById('nomeInstrumento');
+  const marcaProdutoElement = document.getElementById('marcaProduto');
+  const modeloProdutoElement = document.getElementById('modeloProduto');
+  const precoTotalProdutoElement = document.getElementById('precoTotalProduto');
+  const imagemProdutoElement = document.getElementById('imagemProduto');
+  const quantidadeProdutoElement = document.getElementById('quantidadeProduto');
 
-  document.getElementById("nomeInstrumento").innerText = "Instrumento: " + instrumento;
-  document.getElementById("marcaProduto").innerText = "Marca: " + marca;
-  document.getElementById("modeloProduto").innerText = "Modelo: " + modelo;
-  document.getElementById("precoProduto").innerText = "Preço: " + preco;
-  document.getElementById("imagemProduto").src = imagem;
-}
+  nomeInstrumentoElement.textContent = nomeInstrumento;
+  marcaProdutoElement.textContent = marcaProduto;
+  modeloProdutoElement.textContent = modeloProduto;
+  quantidadeProdutoElement.textContent = quantidadeProduto;
+  imagemProdutoElement.src = imagemProduto;
 
-window.onload = function() {
-  preencherProduto();
-};
-
+  const precoTotal = parseFloat(precoProduto) * parseInt(quantidadeProduto);
+  precoTotalProdutoElement.textContent = precoTotal.toFixed(2);
+});

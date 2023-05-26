@@ -1,18 +1,15 @@
-const images = document.querySelectorAll('.zoomable');
+function adicionarAoCarrinho(instrumento, marca, modelo, preco, imagem, button) {
+  const quantidadeInput = button.previousElementSibling;
+  const quantidade = quantidadeInput.value;
 
-images.forEach((image) => {
-  image.addEventListener('click', () => {
-    image.classList.toggle('zoomed');
-  });
-});
+  const urlParams = new URLSearchParams();
+  urlParams.append('nome', instrumento);
+  urlParams.append('marca', marca);
+  urlParams.append('modelo', modelo);
+  urlParams.append('preco', preco);
+  urlParams.append('imagem', imagem);
+  urlParams.append('quantidade', quantidade);
 
-function adicionarAoCarrinho(instrumento, marca, modelo, preco) {
-  document.cookie = "nomeInstrumento=" + encodeURIComponent(instrumento);
-  document.cookie = "marcaProduto=" + encodeURIComponent(marca);
-  document.cookie = "modeloProduto=" + encodeURIComponent(modelo);
-  document.cookie = "precoProduto=" + encodeURIComponent(preco);
-  
-  window.location.href = "carrinho.html";
+  const url = `carrinho.html?${urlParams.toString()}`;
+  window.location.href = url;
 }
-
-  
