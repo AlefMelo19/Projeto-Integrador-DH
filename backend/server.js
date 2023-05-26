@@ -1,4 +1,5 @@
 const express = require('express');
+<<<<<<< HEAD
 const sequelize = require('./database');
 const ProdutoModel = require('./modells/produtoModell');
 const UsuarioModel = require('./modells/usuarioModell');
@@ -39,3 +40,20 @@ sequelize.authenticate()
   .catch((error) => {
     console.error('Erro ao conectar-se ao banco de dados:', error);
   });
+=======
+const app = express();
+const produtoRoutes = require('./routes/produtoRoutes');
+const usuarioRoutes = require('./routes/usuarioRoutes');
+const carrinhoRoutes = require('./routes/carrinhoRoutes');
+
+app.use(express.json());
+
+app.use('/api', produtoRoutes);
+app.use(usuarioRoutes);
+app.use(carrinhoRoutes);
+
+const port = 3000; 
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
+});
+>>>>>>> 91db8b0d814e3cd89dd35ee0b8c563b5870ffaa6
